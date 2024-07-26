@@ -36,3 +36,11 @@ teamMembers.forEach(function(members) {
     console.log(`Role: ${members.role}`);
     console.log(`Image: ${members.image}`);
     });
+
+const container = document.getElementById('team');
+    teamMembers.forEach(function(member) {
+        const memberInfo = document.createElement('div');
+        memberInfo.innerHTML = `Name: ${member.name}, Role: ${member.role}, Image: ${member.image}`;
+        container.append(memberInfo);
+    });
+    
